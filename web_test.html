@@ -22,3 +22,18 @@
     </div>
 	</body>
 </html>
+
+
+<%= if (item.target == 1) { %>
+  전체유저 
+<%= } else if (item.target == 2) { %>
+  지정유저
+<%= } %>
+<%= else if (item.target == 333) { %>
+  <%= if (item.grades.includes('piggyBankMax') == true) { %> piggyBank Max 유저 <%= } %>
+  <%= if (item.grades.includes('Gold') == true) { %> Gold VIP 유저 <%= } %>
+  <%= if (item.grades.includes('Platinum') == true) { %> Platinum VIP 유저 <%= } %>
+  <%= if (item.grades.includes('Diamond') == true) { %> Diamond VIP 유저 <%= } %>
+  <%= if (item.grades.includes('PurpleDiamond') == true) { %> PurpleDiamond VIP 유저 <%= } %>
+  <%= if (item.grades.includes('BlackDiamond') == true) { %> BlackDiamond 유저 <%= } %>
+<%= } %>

@@ -8,5 +8,4 @@ int main(){
   cout.tie(NULL);
 
   cin >> a;
-  
 }
