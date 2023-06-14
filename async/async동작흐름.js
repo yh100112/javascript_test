@@ -1,20 +1,20 @@
+
 const one = () => Promise.resolve('One!');
 
 async function myFunc(){
 	console.log('In function!');
-	const res = await one();
+	const res = await one(); // One! -> Promise 객체
 	console.log(res);
 }
 
 console.log('Before Function!');
 myFunc();
 console.log('After Function!');
-
 /*
-before function
-in function
-after function
-one!
+Before Function!
+In function!
+After Function!
+One!
 
 call stack에 코드를 넣다가 promise 객체를 만나면 해당 함수는 callback queue로 넣고 나머지 call stack을 처리해서 다 비운다.
 call stack이 다 비워지면 그 후 callback queue에 있는 promise 함수를 호출하여 call stack에 넣고 호출한다.
