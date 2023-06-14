@@ -9,6 +9,7 @@ let userData = {
 
 function getUserName(firstName, lastName, callback, obj) {
 	callback.call(obj, firstName, lastName);
+	callback(obj, firstName, lastName); // 이건 되지 않음 userData.name 호출시 Not Set이 담겨있음.
 }
 
 getUserName('kim', 'deokyong', userData.setName, userData);
