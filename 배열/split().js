@@ -8,6 +8,6 @@ console.log(arr[1]); // banana
 console.log(arr[2]); // orange
 
 
-const a = "apple";
+const a = "apple,hello";
 const aaaa = a.split(",");
-console.log(aaaa); // ['apple']
+console.log(aaaa); // ['apple', 'hello']
